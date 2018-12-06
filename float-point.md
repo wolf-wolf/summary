@@ -1,4 +1,4 @@
-## 关于浮点数的那些事
+# say say 浮点数
 
 在进行浮点数运算或判断时，经常会出现很多“奇异”的结果，其实都是浮点数运算及表示规则造的怪
 
@@ -8,13 +8,13 @@
 1050.6 * 100 = 105059.99999999999
 ```
 
-### 基本原因
+## 基本原因
 
 1. 浮点数的运算是基于 IEEE 754 标准的；
 2. 二进制基准；
 3. 对循环小数通过相对误差进行近似表示；
 
-### 相关参考
+## 相关参考
 
 [Stack Overflow](https://stackoverflow.com/questions/588004/is-floating-point-math-broken)
 
@@ -28,6 +28,6 @@
 
 [阮一峰](http://www.ruanyifeng.com/blog/2010/06/ieee_floating-point_representation.html)
 
-### 总结
+## 总结
 1. 尽量少或不用浮点数进行等于判断
 2. 进行浮点数运算时，取整需使用`parseInt`，`Math.round`等函数进行
