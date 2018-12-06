@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## 关于浮点数的那些事
 
-You can use the [editor on GitHub](https://github.com/wolf-wolf/summary/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+在进行浮点数运算或判断时，经常会出现很多“奇异”的结果，其实都是浮点数运算及表示规则造的怪
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```javascript
+0.1 + 0.2 = 0.30000000000000004
+8.88 * 100 = 888.0000000000001
+1050.6 * 100 = 105059.99999999999
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### 基本原因
+1. 浮点数的运算是基于 IEEE 754 标准的；
+2. 二进制基准；
+3. 对循环小数通过相对误差进行近似表示；
 
-### Jekyll Themes
+### 相关参考
+[Stack Overflow](https://stackoverflow.com/questions/588004/is-floating-point-math-broken)
+[Floating Point Math](https://0.30000000000000004.com/)
+[What Every Computer Scientist Should Know About Floating-Point Arithmetic](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html)
+[THE FLOATING-POINT GUIDE](https://floating-point-gui.de/errors/rounding/)
+[Wikipedia](https://en.wikipedia.org/wiki/Floating-point)
+[阮一峰](http://www.ruanyifeng.com/blog/2010/06/ieee_floating-point_representation.html)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wolf-wolf/summary/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### 总结
+1. 尽量少或不用浮点数进行等于判断
+2. 进行浮点数运算时，取整需使用`parseInt`,`Math.round`等函数进行
