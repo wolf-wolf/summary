@@ -152,11 +152,19 @@ SameSite Cookie允许服务器要求某个cookie在跨站请求时不会被发�
 
 ## 相关参考
 [wikipedia](https://zh.wikipedia.org/wiki/Cookie)
+
 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies)
+
 [前端必备HTTP技能之cookie技术详解](https://www.jianshu.com/p/2ceeaef92f20)
+
 [Http协议中Cookie详细介绍](https://www.cnblogs.com/bq-med/p/8603664.html)
+
 [细说Cookie](https://www.cnblogs.com/fish-li/archive/2011/07/03/2096903.html)
+
 [关于Cookie的知识的总结](https://blog.csdn.net/p77ll9l53x/article/details/72675645)
+
 [Cookie详解](https://blog.csdn.net/zcl_love_wx/article/details/51992999)
+
 [菜鸟教程](http://www.runoob.com/js/js-cookies.html)
+
 [阮一峰JavaScript标准参考教程](http://javascript.ruanyifeng.com/bom/cookie.html)
