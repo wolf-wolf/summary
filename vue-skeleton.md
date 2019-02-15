@@ -97,7 +97,7 @@ let app = new Vue({
  3. 设置定时器，检测`webpackJsonp`方法存在，加载页面独立JS文件
 
 Webpack配置文件部分代码如下：
-```
+```JavaScript
 ...
 webpackConfig.plugins.push(new HtmlWebpackPlugin({
     ...
@@ -109,7 +109,8 @@ webpackConfig.plugins.push(new HtmlWebpackPlugin({
 ```
 
 index.html文件注入代码如下：
-```
+<!-- {% raw %} -->
+```html
 ...
 <head>
 ...
@@ -147,12 +148,13 @@ index.html文件注入代码如下：
 ...
 </head>
 <body>
-<% if (htmlWebpackPlugin.files.chunks.vendor) {%>
+<% if (htmlWebpackPlugin.files.chunks.vendor) { %>
 <script src="<%=htmlWebpackPlugin.files.chunks.vendor.entry %>" async></script>
 <% } %>
 </body>
 ...
 ```
+<!-- {% endraw %}) -->
 
 这里使用了插件`HtmlWebpackPlugin`的模板写法，通过`htmlWebpackPlugin`对象进行代码`chunk`的注入，使用方法可参见[官方文档](https://www.npmjs.com/package/html-webpack-plugin)。
 
